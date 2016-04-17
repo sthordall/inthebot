@@ -6,7 +6,7 @@
 
 module.exports = (robot) ->
 
-  robot.respond /((driving|walking|bike|biking|bicycling|flying) )?directions from (.+) to (.+)/i, (msg) ->
+  robot.respond /((driving|walking|bike|biking|bicycling|flights) )?directions from (.+) to (.+)/i, (msg) ->
     mode        = msg.match[2] || 'biking'
     origin      = msg.match[3]
     destination = msg.match[4]
