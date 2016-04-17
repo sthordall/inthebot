@@ -6,11 +6,11 @@
 
 module.exports = (robot) ->
 
-  robot.respond /((driving|walking|bike|biking|bicycling) )?directions from (.+) to (.+)/i, (msg) ->
+  robot.respond /((driving|walking|bike|biking|bicycling|flights) )?directions from (.+) to (.+)/i, (msg) ->
     mode        = msg.match[2] || 'biking'
     origin      = msg.match[3]
     destination = msg.match[4]
-    key         = AIzaSyD23iD3CO7gwxsMgoNTZTCkA0EMs1RZCfM
+    key         = process.env.HUBOT_GOOGLE_API_KEY
 
     if origin == destination
       return msg.send "Now you're just being silly."
