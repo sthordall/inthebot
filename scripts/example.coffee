@@ -18,9 +18,12 @@ module.exports = (robot) ->
 
    robot.respond /open the pod bay doors/i, (res) ->
      res.reply "Im afraid I can't let you do that."
-   
+
    robot.hear /I like pie/i, (res) ->
      res.emote "makes a freshly baked pie"
+
+
+
    #
   # robot.respond /open the (.*) doors/i, (res) ->
   #   doorType = res.match[1]
