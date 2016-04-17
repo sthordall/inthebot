@@ -37,7 +37,7 @@ module.exports = (robot) ->
 					response = "I've found a couple of offers on #{offerReq}:\n"
 					offers = JSON.parse body
 					if offers.length < 1
-						res.send "I didn't find any offers on #{offerReq}" 
+						res.send "I didn't find any offers on #{offerReq}"
 					else
 						for offer in offers
 							do (offer) ->
